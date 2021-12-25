@@ -79,10 +79,11 @@ function timSoChan() {
      var soChan = 0 ;
      for (var i = 0; i < numArray.length; i++) {
           if (Number(numArray[i]) % 2 == 0) {
-               soChan = numArray[i];
-          } else {
-               soChan = -1;
-          }
+               soChan = numArray[i];      
+          }  
+     }
+     if (numArray.length % 2 !== 0) {
+     document.getElementById("text_N5").innerHTML ="Số chẵn cuối cùng: -1";
      }
      document.getElementById("text_N5").innerHTML ="Số chẵn cuối cùng: " + soChan;
 }
