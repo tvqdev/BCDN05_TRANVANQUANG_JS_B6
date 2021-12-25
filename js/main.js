@@ -53,15 +53,24 @@ function soDuongNhoNhat() {
           if (Number(numArray[i]) > 0) {
               soMinD.push(numArray[i])
           };
-      }
+     }
+     
+     var soMin = soMinD[0];
 
-      var soMin = soMinD[0];
-      for (var i = 0; i < soMinD.length; i++) {
-          if (soMin > Number(soMinD[i])) {
-              soMin = soMinD[i];
-          };
-      }
-     document.getElementById("text_N4").innerHTML = "Số dương nhỏ nhất: " + soMin;
+     if (soMin > 0) {
+          for (var i = 0; i < soMinD.length; i++) {
+               if (soMin > Number(soMinD[i])) {
+                   soMin = soMinD[i];
+               } else if(soMinD.length < 0 ) {
+                    
+               };
+           }
+          document.getElementById("text_N4").innerHTML = "Số dương nhỏ nhất: " + soMin;
+     } else {
+          document.getElementById("text_N4").innerHTML = "Không có số dương trong mảng"
+          
+     }
+      
 }
 document.getElementById("btn_N4").onclick = soDuongNhoNhat;
 
