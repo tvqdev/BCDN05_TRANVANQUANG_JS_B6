@@ -154,10 +154,20 @@ function timSoNguyenToDauTien() {
 document.getElementById("btn_N8").onclick = timSoNguyenToDauTien;
 
 // Bài 9
+
+var numArray1 = [];
+
+function nhapNumber1() {
+     var num = Number(document.getElementById("num_N2").value);
+     numArray1.push(num);
+     document.getElementById("text_N12").innerHTML ="  " + numArray1;
+}
+document.getElementById("btn_N12").onclick = nhapNumber1;
+
 function demSoNguyen() {
      var count = 0;
-     for (var i = 0; i < numArray.length; i++) {
-         if (Number.isInteger(numArray[i]) == true) {
+     for (var i = 0; i < numArray1.length; i++) {
+         if (Number.isInteger(numArray1[i]) == true) {
              count++;
          }
      }
